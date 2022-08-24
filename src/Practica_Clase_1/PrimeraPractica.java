@@ -1,4 +1,9 @@
-package Practica_1;
+/*
+  Primera clase: hacer un vector de tipo String, guardar nombre en cada
+  posicion y imprimir por pantalla.
+*/
+
+package Practica_Clase_1;
 
 public class PrimeraPractica {
 
