@@ -1,4 +1,4 @@
-package TablasMultiplicar;
+package Practicas_Estudio;
 import javax.swing.JOptionPane;
 
 public class TablaMultiplicar {

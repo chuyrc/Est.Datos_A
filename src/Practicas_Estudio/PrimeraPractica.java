@@ -3,7 +3,7 @@
   posicion y imprimir por pantalla.
 */
 
-package Practica_Clase_1;
+package Practicas_Estudio;
 
 public class PrimeraPractica {
 

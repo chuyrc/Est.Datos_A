@@ -1,10 +1,10 @@
 /*
-  Practica número 2:
+  Practica número 1:
 */
 
-package Practica_Clase_2;
+package Practicas_Clase_U1;
 import java.util.Scanner;
-public class Numeros {
+public class PC_1 {
     
     public static void main(String[] args) {
         
@@ -26,6 +26,7 @@ public class Numeros {
         for(int i = 0; i < miArreglo.length; i++) {
             
             suma += miArreglo[i];
+            
             if(mayor < miArreglo[i]) {
                 
                 mayor = miArreglo[i];
@@ -37,6 +38,7 @@ public class Numeros {
         }
         
         menor = mayor;
+        
         for(int i = 0; i < miArreglo.length; i++) {
             
             if(menor > miArreglo[i]) {
