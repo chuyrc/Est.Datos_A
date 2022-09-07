@@ -16,7 +16,7 @@ public class PC_1 {
         
         int[] miArreglo = new int[10];
         for(int i = 0; i < miArreglo.length; i++) {
-
+         
             System.out.print("Ingrese el número en la posicion " + (i+1) + ": ");
             System.out.println("");
             miArreglo[i] = in.nextInt();
