@@ -68,5 +68,47 @@ public class PC_3 {
         }
      
     }
-
+    
+    public void printArrays(int[] arrayA,int[] arrayB) {
+     
+        for(int a:arrayA) {
+          
+            for(int b:arrayB) {
+             
+                if(a > b) {
+                
+                    System.out.println(a + "," + b);
+                
+                }
+             
+            }
+          
+        }
+     
+    }
+ 
+    //  Se utiliza la notación o(n) pero a la inversa
+    public static void reverse(int[] array) {
+    
+        for(int i = 0; i < array.length/2; i++) {
+        
+            int other = array.length - i - 1;
+            int temp = array[i];
+         
+            array[i] = array[other];
+            array[other] = temp;
+         
+        }
+    /*
+      ¿El resultado es el mismo, si o no y porque?
+      ¿Se podria generar una constante que NO se necesita?
+    */
+    }
+    /*
+      Cual de las siguientes lineas es igual a O(n):
+      1. o(n+p) en donde p=n/2
+      2. o(2n)
+      3. o(n+m)
+      Encontrar la(s) expresión(es) similar(es) a o(n)
+    */
 }
