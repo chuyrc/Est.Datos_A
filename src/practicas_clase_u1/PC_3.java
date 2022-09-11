@@ -1,7 +1,8 @@
 /*
  Practica clase 3: Notación matematica
 */
-package Practicas_Clase_U1;
+
+package practicas_clase_u1;
 import javax.swing.JOptionPane;
 
 public class PC_3 {
@@ -9,11 +10,16 @@ public class PC_3 {
     public static void main(String args[])  {
         PC_3 objeto = new PC_3();
      
-        int tamanio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de elementos del array"));
-        int[] array = new int[tamanio];
+        int[] array = new int[Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de elementos del primer array"))];
      
         for(int i = 0; i < array.length; i++) {
-            array[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de la posición: " + (i+1)));
+            array[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de la posición: " + (i+1) + " del primer array"));
+        }
+     
+        int[] array2 = new int[Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número de elementos del segundo array"))];
+     
+        for(int i = 0; i < array.length; i++) {
+            array2[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de la posición: " + (i+1) + " del segundo array"));
         }
      
         System.out.println("METODO SUMA Y PRODUCTO");
@@ -22,15 +28,10 @@ public class PC_3 {
         objeto.printPares(array);
         System.out.println("\nMETODO PARES 2");
         objeto.printPares(array,1);
+        System.out.println("\nMETODO CON DOS ARRAYS");
+        objeto.printArrays(array,array2);
         System.out.println("\nMETODO REVERSE");
         reverse(array);
-     
-        //int[] array = new int[5];
-        //array[0] = 1;
-        //array[1] = 2;
-        //array[2] = 3;
-        //array[3] = 4;
-        //array[4] = 5;
     }
 
     public void printSumaYProducto(int[] array) {
@@ -74,10 +75,11 @@ public class PC_3 {
     //  Se utiliza la notación o(n) pero a la inversa
     public static void reverse(int[] array) {
         //  Imprime el arreglo como se introduce
-        System.out.println("Array normal");
+        System.out.print("Array normal\n [");
         for(int arreglo:array) {
-            System.out.println(arreglo);
+            System.out.print(arreglo + ",");
         }
+        System.out.println("]");
      
         for(int i = 0; i < array.length/2; i++) {
             int other = array.length - i - 1;
@@ -88,23 +90,28 @@ public class PC_3 {
         }
      
         // Imprime el arreglo al reves
-        System.out.println("Array al reves");
+        System.out.print("Array al reves\n [");
         for(int arreglo:array) {
-            System.out.println(arreglo);
+            System.out.print(arreglo + ",");
         }
+        System.out.println("]");
      
         /*
-          ¿El resultado es el mismo, si o no y porque?
-            No seria el mismo resultado, ya que el codigo va a intercambiar
-            los numeros al reves
-          ¿Se podria generar una constante que NO se necesita?
+            ¿El resultado es el mismo, si o no y porque?
+                El resultado será diferente, ya que el codigo va a intercambiar
+                los elementos del array al reves.
+            ¿Se podria generar una constante que NO se necesita?
+                Si se podría, pero por lo que hace el algoritmo, no
+                tendría ningún tipo de sentido.
         */
     }
     /*
-       Cual de las siguientes lineas es igual a O(n):
-       1. o(n+p) en donde p=n/2
-       2. o(2n)
-       3. o(n+m)  
-       Encontrar la(s) expresión(es) similar(es) a o(n)
+        Cual de las siguientes lineas es igual a O(n):
+        1. o(n+p) en donde p=n/2
+        2. o(2n)
+        3. o(n+m)  
+        Encontrar la(s) expresión(es) similar(es) a o(n)
+            La expresión similar es la tercera o(n+m).
     */
+
 }
