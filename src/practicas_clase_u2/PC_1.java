@@ -6,7 +6,7 @@ public class PC_1 {
         PC_1 objeto = new PC_1();
      
         try {
-            System.out.println(objeto.factorialRecursividad(-4));
+            System.out.println(objeto.factorialRecursividad(4));
         }catch(IllegalArgumentException e) {
             System.err.println("No se puede calcular el factorial de un número negativo");
         }
@@ -21,8 +21,10 @@ public class PC_1 {
     public int factorialRecursividad(int n) {
         if(n < 0)
             throw new IllegalArgumentException("NO SE PUEDE CALCULAR EL FACTORIAL A UN NÚMERO NEGATIVO");
-        if(n == 0)
+        if(n == 0 || n == 1)
             return 1;
+        if(n == 2)
+            return 2;
      
         return n * factorialRecursividad(n-1);
     }
