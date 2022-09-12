@@ -20,8 +20,7 @@ public class PC_3 {
      
         for(int i = 0; i < array.length; i++) {
             array2[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de la posición: " + (i+1) + " del segundo array"));
-        }
-     
+        }    
         System.out.println("METODO SUMA Y PRODUCTO");
         objeto.printSumaYProducto(array);
         System.out.println("\nMETODO PARES 1");
@@ -41,8 +40,7 @@ public class PC_3 {
         for(int i = 0; i < array.length; i++) {
             suma += array[i];
             producto *= array[i];
-        }
-     
+        }     
         System.out.println("Suma:" + suma + "\nProducto: " + producto);
     }
 
@@ -65,9 +63,8 @@ public class PC_3 {
     public void printArrays(int[] arrayA,int[] arrayB) {
         for(int a:arrayA) {
             for(int b:arrayB) {
-                if(a > b) {
+                if(a > b)
                     System.out.println(a + "," + b);
-                }
             }
         }
     }
@@ -88,14 +85,12 @@ public class PC_3 {
             array[i] = array[other];
             array[other] = temp;
         }
-     
         // Imprime el arreglo al reves
         System.out.print("Array al reves\n [");
         for(int arreglo:array) {
             System.out.print(arreglo + ",");
         }
-        System.out.println("]");
-     
+        System.out.println("]");   
         /*
             ¿El resultado es el mismo, si o no y porque?
                 El resultado será diferente, ya que el codigo va a intercambiar

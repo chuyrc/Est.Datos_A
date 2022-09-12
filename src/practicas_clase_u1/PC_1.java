@@ -18,8 +18,7 @@ public class PC_1 {
         for(int i = 0; i < miArreglo.length; i++) {
             int j = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número: " + (i+1) + ": "));
             miArreglo[i] = j;
-        }
-     
+        }     
         System.out.println("\nARREGLO");
         
         for(int i = 0; i < miArreglo.length; i++) {
@@ -27,23 +26,19 @@ public class PC_1 {
             
             if(mayor < miArreglo[i]) {
                 mayor = miArreglo[i];
-            }
-            
+            }           
             System.out.printf("Posición [%d] Elemento: %d\n",i,miArreglo[i]);
-        }
-        
+        }       
         menor = mayor;
         
         for(int i = 0; i < miArreglo.length; i++) {
-            if(menor > miArreglo[i]) {
+            if(menor > miArreglo[i])
                 menor = miArreglo[i];
-            }
-        }
-     
+        }    
         promedio = suma/miArreglo.length;
         System.out.println("\nNUMEROS IGUALES");
         int cont;
-     
+         
         for (int i = 0; i < miArreglo.length; i++){
             cont = 0;
          

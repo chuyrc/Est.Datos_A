@@ -20,16 +20,14 @@ public class PC_2 {
                 matriz[i][j] = k;
             }
         }
-     
-      
+         
         for(int i = 0; i < matriz.length; i++) {
             sumaFila = 0;
           
             for(int j = 0; j < matriz[i].length; j++) {
                 sumaFila += matriz[i][j];
                 System.out.print(String.format("%d  ",matriz[i][j]));
-            }
-         
+            }         
             System.out.print(String.format("Suma fila: %.2f, Promedio fila: %.2f",sumaFila,sumaFila/matriz.length));
             System.out.println();
         }

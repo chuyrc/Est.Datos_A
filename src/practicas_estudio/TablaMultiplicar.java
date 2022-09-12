@@ -1,11 +1,9 @@
 package practicas_estudio;
-import javax.swing.JOptionPane;
 
 public class TablaMultiplicar {
 
-    public static void main(String args[]) {
-     
-        var p = new TablaMultiplicar();
+    public static void main(String args[]) {    
+        TablaMultiplicar p = new TablaMultiplicar();
      
         System.out.println("TABLAS DE MULTIPLICAR POR METODO\n");
         p.multiplicar(1);
@@ -17,11 +15,9 @@ public class TablaMultiplicar {
          
             for(int j = 1; j <= 10; j++) {
                 System.out.println(" " + i + " X " + j + " = " + i * j);
-            }
-         
+            }         
             System.out.println();
         }
-     
     }
 
     public void multiplicar(int n) {
