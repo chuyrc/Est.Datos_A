@@ -35,7 +35,6 @@ public class PC_1 {
         System.out.printf("Suma de los factoriales desde cero hasta %d es: %d%n",n,suma);
         
         return factorial;
-    } 
+    }
 
 }
-
