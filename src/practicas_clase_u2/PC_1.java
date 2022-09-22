@@ -36,5 +36,32 @@ public class PC_1 {
         
         return factorial;
     }
-
+    /*
+     *
+     *
+     * CODIGO CORREGIDO
+     *
+     *
+     *
+    public static void main(String args[]) {    
+           double factorial = 1;
+           int n;
+           Scanner sc = new  Scanner(System.in);
+         
+           //leer número
+           do{
+               System.out.print("Introduce un número > 0: ");
+               n = sc.nextInt();
+           }while(n < 0);
+         
+          for(int i = 0; i <= n; i++) {
+          factorial = 1;
+             
+               for(int j = 1; j <= n; j++) {          
+                   factorial *= j;               
+               }          
+          }
+           System.out.printf("Factorial de %2d es: %.0f\n",n,factorial);  
+       }
+    */
 }
