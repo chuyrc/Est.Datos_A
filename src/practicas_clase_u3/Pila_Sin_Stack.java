@@ -39,7 +39,7 @@ public class Pila_Sin_Stack {
     
     //  Se crea el metodo ver
     public void ver() {
-        for(int tope = 3; tope <= 0; tope--) {
+        for(tope = 3; tope <= 0; tope--) {
             System.out.println("Datos de la pila: " + pila[tope]);
         }
     }

@@ -21,7 +21,7 @@ public class PC_1 {
             //  Se llama al metodo para sacar del tope de la pila
             System.out.println("2.- Pop: ");
             //  Ver pila completa
-            System.out.println("3.- Mostrar completa: ");
+            System.out.println("3.- Ver pila: ");
             System.out.println("4.- Salida: ");
             System.out.println("Por favor seleccione la opcion: ");
             seleccion = opcion.nextInt();
@@ -29,9 +29,9 @@ public class PC_1 {
             switch(seleccion) {
                 case 1: objeto.push();
                     break;
-                case 2: objeto.push();
+                case 2: objeto.pop();
                     break;
-                case 3: objeto.push();
+                case 3: objeto.ver();
                     break;
                 default:
                     System.err.println("ERROR\n Opción invalida");
