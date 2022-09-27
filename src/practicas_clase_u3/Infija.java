@@ -30,22 +30,46 @@ public class Infija {
         
         //  Se considera como excepción infijo o posfijo
         try {
+            
             //  Algoritmo de una expresión infija/posfija
             while(!e.isEmpty()) {
-                case 1:
-                p.push(e.pop());
-                break;
-                case 3:
-                case 4:
                 
-                while(pref(p.peek()) >= pref(e.peek())) {
-                    s.push(p.pop());
+                //  peek examina el ultimo elemento de la pila
+                switch(pref(e.peek())) {
+                    case 1:
+                        p.push(e.pop());
+                        break;                        
+                    case 3:
+                    case 4:               
+                        while(pref(p.peek()) >= pref(e.peek())) {
+                            s.push(p.pop());
+                        }
+                        
+                        //  Desapila los elementos
+                        p.push(e.pop());
+                        break;
+                    case 2:
+                        while(!p.peek().equals("(")) {
+                            s.push(p.pop());
+                        }
+                        p.pop();
+                        e.pop();
+                        break;
+                    default:
+                        s.push(e.pop());
                 }
-                p.push(e.pop());
-                break;
-                case 2:
             }
-        }
+            
+            //  Eliminación de impurezas en las expresiones algebraicas
+            String infix = expr.replace("","");
+            String postFix = s.toString().replaceAll("[\\]\\[,}","");
+            
+            //  Mostrar resultados
+            System.out.println("Expresión INFIJA:" + infix);
+            System.out.println("Expresión POSTFIJA:" + postFix);
+            
+        }catch(Exception e){
+        }        
     }
     
 }
