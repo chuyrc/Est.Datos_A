@@ -11,7 +11,7 @@ import java.util.Stack;
 public class Infija {
     
     public static void main(String[] args) {
-        System.out.println("Escribe una expresion algebraica");
+        System.out.print("Escribe una expresion algebraica: ");
         Scanner sc = new Scanner(System.in);
         
         //  Depurar la expresión algebraica
@@ -68,8 +68,44 @@ public class Infija {
             System.out.println("Expresión INFIJA:" + infix);
             System.out.println("Expresión POSTFIJA:" + postFix);
             
-        }catch(Exception e){
-        }        
+        }catch(Exception ex){
+            System.err.println("Se ha producido un error");
+            System.out.println(ex);
+        }
     }
     
+    //  Depurar la expresión algebraica
+    private static String depurar(String s) {
+        s=s.replaceAll("\\s+","");
+        s = "(" + s + ")";
+        String simbols = "+-*/()";
+        String str = "";
+     
+        //  Dejar espacio entre los operadores
+        for(int i = 0; i < s.length(); i++) {
+            if(simbols.contains("" + s.charAt(i))) 
+                str += "" + s.charAt(i) + "";
+            else 
+                str += s.charAt(i);
+        }
+      
+        return str.replaceAll("\\s+","").trim();
+    }
+  
+    //  Método para validar la jerarquia de los operadores
+    private static int pref(String op) {
+        int prf = 99;
+     
+        if(op.equals("^"))
+            prf = 5;
+        if(op.equals("*") || op.equals("/"))
+            prf = 4;
+        if(op.equals("+") || op.equals("-"))
+            prf = 3;
+        if(op.equals(")"))
+           prf = 2;
+        
+        return prf;
+    }  
+
 }
