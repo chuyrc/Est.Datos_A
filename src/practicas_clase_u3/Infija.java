@@ -62,7 +62,7 @@ public class Infija {
             
             //  Eliminación de impurezas en las expresiones algebraicas
             String infix = expr.replace("","");
-            String postFix = s.toString().replaceAll("[\\]\\[,}","");
+            String postFix = s.toString().replaceAll("[\\]\\[,]"," ");
             
             //  Mostrar resultados
             System.out.println("Expresión INFIJA:" + infix);
@@ -76,7 +76,7 @@ public class Infija {
     
     //  Depurar la expresión algebraica
     private static String depurar(String s) {
-        s=s.replaceAll("\\s+","");
+        s = s.replaceAll("\\s+","");
         s = "(" + s + ")";
         String simbols = "+-*/()";
         String str = "";
@@ -89,7 +89,7 @@ public class Infija {
                 str += s.charAt(i);
         }
       
-        return str.replaceAll("\\s+","").trim();
+        return str.replaceAll("\\s+","");
     }
   
     //  Método para validar la jerarquia de los operadores
@@ -103,7 +103,9 @@ public class Infija {
         if(op.equals("+") || op.equals("-"))
             prf = 3;
         if(op.equals(")"))
-           prf = 2;
+            prf = 2;
+        if(op.equals("("))
+            prf = 1;
         
         return prf;
     }  
